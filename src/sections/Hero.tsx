@@ -2,20 +2,52 @@ import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import StarIcon from "@/assets/icons/star.svg";
+import SparcleIcon from "@/assets/icons/sparkle.svg";
+import {HeroOrbit} from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div
-        className="absolute inset-0 -z-30 opacity-5"
-        style={{
-          backgroundImage: `url(${grainImage.src})`
-        }}
-      ></div>
-      <div className="size-[620px] hero-ring"></div>
-      <div className="size-[820px] hero-ring"></div>
-      <div className="size-[1020px] hero-ring"></div>
-      <div className="size-[1220px] hero-ring"></div>
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+        <div
+          className="absolute inset-0 -z-30 opacity-5"
+          style={{
+            backgroundImage: `url(${grainImage.src})`
+          }}
+        ></div>
+        <div className="size-[620px] hero-ring"></div>
+        <div className="size-[820px] hero-ring"></div>
+        <div className="size-[1020px] hero-ring"></div>
+        <div className="size-[1220px] hero-ring"></div>
+        <HeroOrbit size={800} rotate={-72}>
+          <StarIcon className="size-28 text-emerald-300"/>
+        </HeroOrbit>
+        <HeroOrbit size={550} rotate={20}>
+          <StarIcon className="size-12 text-emerald-300"/>
+        </HeroOrbit>
+        <HeroOrbit size={590} rotate={98}>
+          <StarIcon className="size-8 text-emerald-300"/>
+        </HeroOrbit>
+        <HeroOrbit size={430} rotate={-14}>
+          <SparcleIcon className="size-8 text-emerald-300/20"/>
+        </HeroOrbit>
+        <HeroOrbit size={530} rotate={178}>
+          <SparcleIcon className="size-10 text-emerald-300/20"/>
+        </HeroOrbit>
+        <HeroOrbit size={710} rotate={144}>
+          <SparcleIcon className="size-14 text-emerald-300/20"/>
+        </HeroOrbit>
+        <HeroOrbit size={720} rotate={85}>
+          <div className="size-3 rounded-full bg-emerald-300/20"/>
+        </HeroOrbit>
+        <HeroOrbit size={520} rotate={-41}>
+          <div className="size-2 rounded-full bg-emerald-300/20"/>
+        </HeroOrbit>
+        <HeroOrbit size={650} rotate={-5}>
+          <div className="size-2 rounded-full bg-emerald-300/20"/>
+        </HeroOrbit>
+      </div>
       <div className="container">
         <div className="flex flex-col items-center">
           <Image
